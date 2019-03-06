@@ -4,7 +4,11 @@
   "description": "Simpler analytics using HTML attributes.",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build-with-map -- --experimental-scope-hoisting",
+    "build-with-map": "npm run clean && parcel build lytics.js",
+    "clean": "rm -rf dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html -p 3000 --open"
   },
   "repository": {
     "type": "git",
