@@ -1,0 +1,28 @@
+{
+  "name": "lytics",
+  "version": "1.0.0",
+  "description": "Simpler analytics using HTML attributes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razorpay/lytics.js.git"
+  },
+  "keywords": [
+    "lytics",
+    "analytics",
+    "razorpay",
+    "html"
+  ],
+  "author": "umanghome",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/razorpay/lytics.js/issues"
+  },
+  "homepage": "https://github.com/razorpay/lytics.js#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
+  }
+}
