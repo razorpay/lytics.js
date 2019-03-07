@@ -1,5 +1,5 @@
 {
-  "name": "lytics",
+  "name": "lytics.js",
   "version": "1.0.0",
   "description": "Simpler analytics using HTML attributes.",
   "main": "dist/lytics",
