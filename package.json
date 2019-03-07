@@ -2,7 +2,7 @@
   "name": "lytics",
   "version": "1.0.0",
   "description": "Simpler analytics using HTML attributes.",
-  "main": "lytics.js",
+  "main": "dist/lytics",
   "scripts": {
     "build": "npm run build-with-map -- --experimental-scope-hoisting",
     "build-with-map": "npm run clean && parcel build lytics.js --global lytics",
