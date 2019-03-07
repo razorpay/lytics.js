@@ -1,4 +1,20 @@
 /**
+ * Converts hyphen-case to camelCase
+ * @param {String} string 
+ * 
+ * @return {String}
+ */
+function hyphenToCamelCase(string) {
+  return string.split('-').map((word, index) => {
+    if (index === 0) {
+      return word;
+    }
+
+    return word[0].toUpperCase() + word.slice(1, word.length);
+  }).join('');
+}
+
+/**
  * Returns all attribute names.
  * @param {DOMNode} el
  * 
@@ -45,13 +61,7 @@ function convertNameToLyticsProperty(name) {
     return 'trigger';
   }
 
-  name = name.toLowerCase().replace('data-lytics-', '').split('-').map((name, index) => {
-    if (index === 0) {
-      return name;
-    }
-
-    return name[0].toUpperCase() + name.slice(1, name.length);
-  }).join('');
+  name = hyphenToCamelCase(name.toLowerCase().replace('data-lytics-', ''));
 
   return name;
 }
