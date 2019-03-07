@@ -1,5 +1,27 @@
 <html>
 <body>
+
+  <div data-lytics="click" data-lytics-foo="bar">
+    <span>Search </span>
+    <a href="https://google.com" data-lytics="click" data-lytics-where="google">Google</a>
+
+    <div>
+      <form action="https://google.com" method="GET" data-lytics="submit" data-lytics-type="search">
+        <input type="text" placeholder="What do you want to search for?">
+        <button>Search</button>
+      </form>
+    </div>
+  </div>
+
   <script src="./lytics.js"></script>
+  <script>
+    lytics({
+      parent: 'body',
+      tracker: function (event, callback) {
+        console.log(event);
+        callback();
+      }
+    });
+  </script>
 </body>
 </html>
