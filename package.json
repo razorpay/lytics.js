@@ -2,14 +2,14 @@
   "name": "lytics",
   "version": "1.0.0",
   "description": "Simpler analytics using HTML attributes.",
-  "main": "index.js",
+  "main": "lytics.js",
   "scripts": {
     "build": "npm run build-with-map -- --experimental-scope-hoisting",
-    "build-with-map": "npm run clean && parcel build lytics.js",
+    "build-with-map": "npm run clean && parcel build lytics.js --global lytics",
     "clean": "rm -rf dist/",
     "lint": "eslint *.js utils/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html -p 3000 --open"
+    "start": "parcel index.html -p 3000 --open --global lytics"
   },
   "repository": {
     "type": "git",

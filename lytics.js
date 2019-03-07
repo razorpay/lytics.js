@@ -37,11 +37,5 @@ function lytics(options = {}) {
   };
 }
 
-lytics.getAttribsFromEl = Attributes.getLyticsAttributes;
-
-// Set in window.
-if (window) {
-  window.lytics = lytics;
-}
-
-export default lytics;
+export const init = lytics;
+export const getAttributesOfEl = Attributes.getLyticsAttributes;
