@@ -91,3 +91,31 @@ export function getCallbackForFormSubmit(el) {
     el.submit();
   };
 }
+
+/**
+ * Wrap callback so that it is executed after
+ * `timeout` ms in case it is not invoked manually.
+ * @param {Function} callback Callback to execute.
+ * @param {Number} timeout Time after which to invoke callback automatically.
+ * 
+ * @return {Function}
+ */
+export function createCallbackWithTimeout (callback, timeout) {
+  const shouldTimeout = timeout > 0;
+  let executed = false;
+
+  if (shouldTimeout) {
+    setTimeout(() => {
+      executed = true;
+      callback();
+    }, timeout);
+  }
+
+  // Consumer will get this method as the callback.
+  return () => {
+    if (!executed) {
+      executed = true;
+      callback();
+    }
+  }
+}

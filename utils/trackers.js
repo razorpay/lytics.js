@@ -9,8 +9,9 @@ function noop () {}
  * @param {Event} e Event
  * @param {String} action Type of action.
  * @param {Function} tracker Tracker method.
+ * @param {Number} timeout Time after which to invoke callback automatically.
  */
-function parseParamsAndTrack(el, e, action, tracker) {
+function parseParamsAndTrack(el, e, action, tracker, timeout) {
   const attributes = Attributes.getLyticsAttributes(el);
 
   // If there are not attributes, do nothing.
@@ -37,6 +38,8 @@ function parseParamsAndTrack(el, e, action, tracker) {
     callback = noop;
   }
 
+  callback = Callbacks.createCallbackWithTimeout(callback, timeout);
+
   // Track the attributes.
   tracker(attributes, callback);
 }
@@ -47,14 +50,15 @@ function parseParamsAndTrack(el, e, action, tracker) {
  * @param {Event} event Event
  * @param {String} type Type of event.
  * @param {Function} tracker Tracker method.
+ * @param {Number} timeout Time after which to invoke callback automatically.
  */
-export function checkLyticsAndTrack(el, event, type = 'click', tracker) {
+export function checkLyticsAndTrack(el, event, type = 'click', tracker, timeout) {
   // Check if the clicked element has Lytics to be tracked.
   if (!el) return;
 
   const attributes = Attributes.getLyticsAttributes(el);
 
   if (attributes.trigger && attributes.trigger === type) {
-    parseParamsAndTrack(el, event, type, tracker);
+    parseParamsAndTrack(el, event, type, tracker, timeout);
   }
 }
