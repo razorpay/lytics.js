@@ -1,0 +1,32 @@
+{
+  "name": "lytics",
+  "version": "1.0.0",
+  "description": "Simpler analytics using HTML attributes.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-with-map -- --experimental-scope-hoisting",
+    "build-with-map": "npm run clean && parcel build lytics.js",
+    "clean": "rm -rf dist/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html -p 3000 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razorpay/lytics.js.git"
+  },
+  "keywords": [
+    "lytics",
+    "analytics",
+    "razorpay",
+    "html"
+  ],
+  "author": "umanghome",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/razorpay/lytics.js/issues"
+  },
+  "homepage": "https://github.com/razorpay/lytics.js#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
+  }
+}
