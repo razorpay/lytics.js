@@ -17,6 +17,7 @@ function lytics(options = {}) {
     parent = document.documentElement,
     tracker = noopTracker,
     ignoreSynthetic = true,
+    timeout = 300,
   } = options;
 
   // Check if parent is a string.
@@ -29,7 +30,7 @@ function lytics(options = {}) {
     return;
   }
 
-  const off = Listeners.initListeners(parent, tracker, ignoreSynthetic);
+  const off = Listeners.initListeners(parent, tracker, ignoreSynthetic, timeout);
 
   return {
     off
