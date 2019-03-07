@@ -7,6 +7,7 @@
     "build": "npm run build-with-map -- --experimental-scope-hoisting",
     "build-with-map": "npm run clean && parcel build lytics.js",
     "clean": "rm -rf dist/",
+    "lint": "eslint *.js utils/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html -p 3000 --open"
   },
@@ -27,6 +28,11 @@
   },
   "homepage": "https://github.com/razorpay/lytics.js#readme",
   "devDependencies": {
+    "eslint": "^5.15.1",
     "parcel-bundler": "^1.11.0"
+  },
+  "dependencies": {
+    "sr": "^1.0.0",
+    "src": "^1.1.2"
   }
 }
