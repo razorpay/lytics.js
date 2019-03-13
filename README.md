@@ -1,7 +1,7 @@
 # lytics.js
 Simpler analytics using HTML attributes.
 
-### Lytics enables analytics tracking by adding `data-lytics-*` attributes to HTML elements, without having to write JavaScript for individual elements.
+Lytics enables analytics tracking by adding `data-lytics-*` attributes to HTML elements, without having to write JavaScript for individual elements.
 
 ---
 
@@ -50,12 +50,12 @@ Currently, only two types of triggers are supported:
 1. click
 2. submit
 
-## `data-lytics-*`
+### `data-lytics-*`
 
 - Attributes to track have to be specified as data attributes with the prefix `data-lytics-`. Example: `data-lytics-foo-bar="baz"`. When this property is sent to the tracker, it is converted into camelCase. The tracker will receive `{ fooBar: "baz" }` as the event properties.
 - The trigger is specified using the attribute `data-lytics`. For example, for click tracking, we would use `data-lytics="click"`. Due to this, `data-lytics-trigger` will not be respected and hence will not work.
 
-## `lytics.init`
+### `lytics.init`
 
 `lytics.init` accepts on parameter: an object with the following properties
 
@@ -74,13 +74,13 @@ It returns an object, which has the following properties.
 | --- | --- | --- |
 | off | Function | Turns off tracking. |
 
-## Tracker method
+### Tracker method
 
 The tracker method that you pass while initializing lytics will receive two argumetns upon each event:
 1. `props` - Contains the event properties.
 2. `callback` - Callback to invoke once processing is done. When callback is invoked, the default behaviour of the event will be triggered. For example, when a link is clicked, redirection will only happen after `callback` is invoked.
 
-## `lytics.getLyticsAttributes(el)`
+### `lytics.getLyticsAttributes(el)`
 
 This method takes a DOM Element as an argument and returns an object containing values for Lytics that exist on that element.
 
