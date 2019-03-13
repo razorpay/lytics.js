@@ -14,6 +14,34 @@ There are lots of "clicks" and "submits" on websites that we need to track. Writ
 
 Add `data-lytics-*` attributes to elements, and initialize Lytics by invoking `lytics.init(opts)`. Voilà.
 
+# Usage
+
+Import the package if you are using npm.
+
+```js
+import lytics from 'lytics.js';
+```
+
+Include the JS otherwise.
+
+```html
+<script src="pathtounpkg" type="text/javascript"></script>
+```
+
+Initialise lytics
+
+```js
+lytics.init({
+  parent: '#myContainer',
+  track: (props, callback) => {
+    trackAnalyticsForWebsite(props)
+      .then(() => {
+        callback();
+      });
+  }
+})
+```
+
 # Documentation
 
 ## Triggers
@@ -25,7 +53,7 @@ Currently, only two types of triggers are supported:
 ## `data-lytics-*`
 
 - Attributes to track have to be specified as data attributes with the prefix `data-lytics-`. Example: `data-lytics-foo-bar="baz"`. When this property is sent to the tracker, it is converted into camelCase. The tracker will receive `{ fooBar: "baz" }` as the event properties.
-- The trigger is specified using the attribute `data-lytics`. For example, for click tracking, we would use `data-lytics="click"`. Due to this, `data-lytics-trigger` will not work.
+- The trigger is specified using the attribute `data-lytics`. For example, for click tracking, we would use `data-lytics="click"`. Due to this, `data-lytics-trigger` will not be respected and hence will not work.
 
 ## `lytics.init`
 
