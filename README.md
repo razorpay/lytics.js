@@ -3,18 +3,27 @@ Simpler analytics using HTML attributes.
 
 Lytics enables analytics tracking by adding `data-lytics-*` attributes to HTML elements, without having to write JavaScript for individual elements.
 
----
-
-## Why?
-
+### Why?
 
 There are lots of "clicks" and "submits" on websites that we need to track. Writing code to add event listeners to lots of elements is not really elegant.
 
-## How?
+# Getting Started
 
-Add `data-lytics-*` attributes to elements, and initialize Lytics by invoking `lytics.init(opts)`. Voilà.
+### Installing
 
-# Usage
+NPM
+```bash
+npm i lytics --save
+```
+
+Unpkg
+```html
+<script src="pathtounpkg" type="text/javascript"></script>
+```
+
+### Initialising
+
+Add `data-lytics-*` attributes to elements, and initialize Lytics by invoking `lytics.init(opts)`.
 
 Import the package if you are using npm.
 
@@ -22,14 +31,9 @@ Import the package if you are using npm.
 import lytics from 'lytics.js';
 ```
 
-Include the JS otherwise.
+If the script is included using a `<script>` tag, lytics will be available as `window.lytics`.
 
-```html
-<script src="pathtounpkg" type="text/javascript"></script>
-```
-
-Initialise lytics
-
+Initialise lytics:
 ```js
 lytics.init({
   parent: '#myContainer',
@@ -44,7 +48,7 @@ lytics.init({
 
 # Documentation
 
-## Triggers
+### Triggers
 
 Currently, only two types of triggers are supported:
 1. click
@@ -88,7 +92,7 @@ This method takes a DOM Element as an argument and returns an object containing 
 
 - Lytics is supposed to be used only on elements whose behaviour isn't being overriden manually by JavaScript.
 
-# Browser Support
+#### Browser Support
 
 | Browser | Version |
 | --- | --- |
@@ -98,3 +102,7 @@ This method takes a DOM Element as an argument and returns an object containing 
 | IE | 8 |
 | Opera | 10 |
 | Safari | 3.2 |
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
