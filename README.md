@@ -1,5 +1,7 @@
 # lytics.js
-Simpler analytics using HTML attributes.
+> Simpler analytics using HTML attributes.
+
+<a href="https://www.npmjs.com/package/lytics.js" alt="npm"><img src="https://img.shields.io/npm/v/lytics.js.svg" /></a> <a href="https://github.com/razorpay/lytics.js/tree/master/LICENSE" alt="license"><img src="https://img.shields.io/github/license/razorpay/lytics.js.svg" /></a>
 
 Lytics enables analytics tracking by adding `data-lytics-*` attributes to HTML elements, without having to write JavaScript for individual elements.
 
