@@ -69,10 +69,10 @@ Currently, only two types of triggers are supported:
 | --- | --- | --- | --- |
 | parent | String or HTMLElement | `document.documentElement` | Parent element or selector. Delegated events will be listened from this element. |
 | track | Function | (p, cb) => cb(); | Function that gets two parameters: `props`, `callback`. Make sure to invoke callback in the tracking method that you provide. |
-| ignoreSynthetic | Boolean | `true` | Whether or not to ignore synthetic events. Synthetic events are events trigerred programmatically. |
+| ignoreSynthetic | Boolean | `true` | Whether or not to ignore synthetic events. Synthetic events are events triggerred programmatically. |
 | timeout | Number | 300 | Timeout for automatic invocation of callback. If the callback isn't executed within `timeout` ms by you, it will automatically be executed.
 
-We need the `timeout` property because in case of links (with lytics attributes) being opened in new tabs, if there's a huge delay before the callback is executed, the browser will prevent the new tab from being opened due to popup blocking. In case you are confident about executing the callback, you can pass `0` as the timeout value, it will disable automativc invocation of callback.
+We need the `timeout` property because in case of links (with lytics attributes) being opened in new tabs, if there's a huge delay before the callback is executed, the browser will prevent the new tab from being opened due to popup blocking. In case you are confident about executing the callback, you can pass `0` as the timeout value, it will disable automatic invocation of callback.
 
 It returns an object, which has the following properties.
 
@@ -82,7 +82,7 @@ It returns an object, which has the following properties.
 
 ### Tracker method
 
-The tracker method that you pass while initializing lytics will receive two argumetns upon each event:
+The tracker method that you pass while initializing lytics will receive two arguments upon each event:
 1. `props` - Contains the event properties.
 2. `callback` - Callback to invoke once processing is done. When callback is invoked, the default behaviour of the event will be triggered. For example, when a link is clicked, redirection will only happen after `callback` is invoked.
 
@@ -92,7 +92,7 @@ This method takes a DOM Element as an argument and returns an object containing 
 
 # Misc
 
-- Lytics is supposed to be used only on elements whose behaviour isn't being overriden manually by JavaScript.
+- Lytics is supposed to be used only on elements whose behaviour isn't being overridden manually by JavaScript.
 
 #### Browser Support
 
