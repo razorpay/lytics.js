@@ -98,12 +98,12 @@ This method takes a DOM Element as an argument and returns an object containing 
 
 | Browser | Version |
 | --- | --- |
-| Chrome | 1 |
+| Chrome | 46 and above |
 | Edge | All |
-| Firefox | 3.5 |
-| IE | 8 |
-| Opera | 10 |
-| Safari | 3.2 |
+| Firefox | 20 and above |
+| IE | 10 and above |
+| Opera | 33 and above |
+| Safari | 10.1 and above |
 
 # License
 
