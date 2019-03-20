@@ -2,7 +2,7 @@ import * as Attributes from './utils/attributes';
 import * as Listeners from './utils/listeners';
 
 const noopTracker = function (props, cb) {
-  cb && cb(props);
+  cb();
 };
 
 /**
@@ -37,11 +37,5 @@ function lytics(options = {}) {
   };
 }
 
-lytics.getAttribsFromEl = Attributes.getLyticsAttributes;
-
-// Set in window.
-if (window) {
-  window.lytics = lytics;
-}
-
-export default lytics;
+export const init = lytics;
+export const getAttributesOfEl = Attributes.getLyticsAttributes;
