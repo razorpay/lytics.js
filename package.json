@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build-with-map -- --experimental-scope-hoisting",
     "build-with-map": "npm run clean && parcel build lytics.js --global lytics",
-    "clean": "rm -rf dist/",
+    "clean": "rm -rf dist/ && mkdir dist && cp test.html dist/test.html",
     "lint": "eslint *.js utils/**/*.js",
     "test": "mocha test.js --exit",
     "start": "parcel index.html -p 3000 --open --global lytics"
@@ -43,7 +43,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run build && npm run test"
+      "pre-push": "npm run test"
     }
   }
 }
