@@ -6,9 +6,9 @@
   "scripts": {
     "build": "npm run build-with-map -- --experimental-scope-hoisting",
     "build-with-map": "npm run clean && parcel build lytics.js --global lytics",
-    "clean": "rm -rf dist/ && mkdir dist && cp test.html dist/test.html",
+    "clean": "rm -rf dist/",
     "lint": "eslint *.js utils/**/*.js",
-    "test": "mocha test.js --exit",
+    "test": "cp test.html dist/test.html && mocha test.js --exit",
     "start": "parcel index.html -p 3000 --open --global lytics"
   },
   "repository": {
