@@ -1,0 +1,28 @@
+<html>
+<body>
+  <div data-lytics="click" data-lytics-foo="bar">
+    <span>Search </span>
+    <a href="https://google.com" data-lytics="click" data-lytics-where="google">Google</a>
+
+    <div>
+      <form action="https://google.com" method="GET" data-lytics="submit" data-lytics-type="search">
+        <input type="text" placeholder="What do you want to search for?" data-lytics="click" data-lytics-type="input">
+        <button>Search</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./lytics.js" type="text/javascript"></script>
+  <script>
+    window.eventList = [];
+
+    lytics.init({
+      parent: 'body',
+      tracker: function (event, callback) {
+        window.eventList.push(event);
+        callback();
+      }
+    });
+  </script>
+</body>
+</html>
