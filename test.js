@@ -30,13 +30,17 @@ describe('browser tests', async () => {
     page = await browser.newPage();
   });
   
-  it('checks if window.lytics exists', async () => {
+  it('checks if window.lytics exists', async function () {
+    this.timeout(0);
+
     await page.goto(`${server.protocol}://${server.address}:${server.port}/test.html`);
     const exists = await page.evaluate(() => typeof window.lytics !== 'undefined');
     chai.assert.equal(exists, true);
   });
 
-  it('tracks event on click', async () => {
+  it('tracks event on click', async function () {
+    this.timeout(0);
+
     await page.goto(`${server.protocol}://${server.address}:${server.port}/test.html`);
     await page.click('input');
     await sleep(100);
