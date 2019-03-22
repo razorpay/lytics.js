@@ -37,10 +37,6 @@
     "puppeteer": "^1.13.0",
     "serve-static": "^1.13.2"
   },
-  "dependencies": {
-    "sr": "^1.0.0",
-    "src": "^1.1.2"
-  },
   "husky": {
     "hooks": {
       "pre-push": "npm run test"
