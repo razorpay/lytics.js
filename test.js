@@ -60,6 +60,19 @@ describe('browser tests', async () => {
     chai.assert.equal(eventList[1].foo, 'bar');
   });
 
+  it('checks if lytics.getAttributesOfEl works correctly', async function () {
+    this.timeout(0);
+
+    await page.goto(`${server.protocol}://${server.address}:${server.port}/test.html`);
+
+    const attributes = await page.evaluate(() => lytics.getAttributesOfEl(document.querySelector('input')));
+
+    chai.expect(attributes).to.have.property('trigger');
+    chai.expect(attributes).to.have.property('type');
+    chai.assert.equal(attributes.trigger, 'click');
+    chai.assert.equal(attributes.type, 'input');
+  });
+
   after(async () => {
     await browser.close();
   })

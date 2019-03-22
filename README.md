@@ -5,6 +5,8 @@
 
 Lytics enables analytics tracking by adding `data-lytics-*` attributes to HTML elements, without having to write JavaScript for individual elements.
 
+Inspired by Google Analytics' [eventTracker plugin](https://github.com/googleanalytics/autotrack/blob/master/docs/plugins/event-tracker.md). `eventTracker` doesn't support tracking anchor tags properly if they redirect the user to a different page. Lytics does.
+
 ### Why?
 
 There are lots of "clicks" and "submits" on websites that we need to track. Writing code to add event listeners to lots of elements is not really elegant.
@@ -86,7 +88,7 @@ The tracker method that you pass while initializing lytics will receive two argu
 1. `props` - Contains the event properties.
 2. `callback` - Callback to invoke once processing is done. When callback is invoked, the default behaviour of the event will be triggered. For example, when a link is clicked, redirection will only happen after `callback` is invoked.
 
-### `lytics.getLyticsAttributes(el)`
+### `lytics.getAttributesOfEl(el)`
 
 This method takes a DOM Element as an argument and returns an object containing values for Lytics that exist on that element.
 
