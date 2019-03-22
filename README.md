@@ -5,7 +5,7 @@
 
 Lytics enables analytics tracking by adding `data-lytics-*` attributes to HTML elements, without having to write JavaScript for individual elements.
 
-Inspired by Google Analytics' [eventTracker plugin](https://github.com/googleanalytics/autotrack/blob/master/docs/plugins/event-tracker.md).
+Inspired by Google Analytics' [eventTracker plugin](https://github.com/googleanalytics/autotrack/blob/master/docs/plugins/event-tracker.md). `eventTracker` doesn't support tracking anchor tags properly if they redirect the user to a different page. Lytics does.
 
 ### Why?
 
