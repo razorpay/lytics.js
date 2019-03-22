@@ -5,6 +5,8 @@
 
 Lytics enables analytics tracking by adding `data-lytics-*` attributes to HTML elements, without having to write JavaScript for individual elements.
 
+Inspired by Google Analytics' [eventTracker plugin](https://github.com/googleanalytics/autotrack/blob/master/docs/plugins/event-tracker.md).
+
 ### Why?
 
 There are lots of "clicks" and "submits" on websites that we need to track. Writing code to add event listeners to lots of elements is not really elegant.
