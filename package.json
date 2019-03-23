@@ -21,7 +21,7 @@
     "razorpay",
     "html"
   ],
-  "author": "umanghome",
+  "author": "Umang Galaiya <umang.galaiya@razorpay.com> (https://umanggalaiya.in)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/razorpay/lytics.js/issues"
@@ -36,10 +36,6 @@
     "parcel-bundler": "^1.11.0",
     "puppeteer": "^1.13.0",
     "serve-static": "^1.13.2"
-  },
-  "dependencies": {
-    "sr": "^1.0.0",
-    "src": "^1.1.2"
   },
   "husky": {
     "hooks": {
