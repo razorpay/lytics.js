@@ -109,4 +109,4 @@ This method takes a DOM Element as an argument and returns an object containing 
 
 # License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
