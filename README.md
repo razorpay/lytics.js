@@ -41,7 +41,7 @@ Initialise lytics:
 ```js
 lytics.init({
   parent: '#myContainer',
-  track: (props, callback) => {
+  tracker: (props, callback) => {
     trackAnalyticsForWebsite(props)
       .then(() => {
         callback();
@@ -70,7 +70,7 @@ Currently, only two types of triggers are supported:
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
 | parent | String or HTMLElement | `document.documentElement` | Parent element or selector. Delegated events will be listened from this element. |
-| track | Function | (p, cb) => cb(); | Function that gets two parameters: `props`, `callback`. Make sure to invoke callback in the tracking method that you provide. |
+| tracker | Function | (p, cb) => cb(); | Function that gets two parameters: `props`, `callback`. Make sure to invoke callback in the tracking method that you provide. |
 | ignoreSynthetic | Boolean | `true` | Whether or not to ignore synthetic events. Synthetic events are events triggered programmatically. |
 | timeout | Number | 300 | Timeout for automatic invocation of callback. If the callback isn't executed within `timeout` ms by you, it will automatically be executed.
 
