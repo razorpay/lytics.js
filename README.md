@@ -22,7 +22,7 @@ npm i @razorpay/lytics --save
 
 Unpkg
 ```html
-<script src="https://unpkg.com/@razorpay/lytics@1.0.0/dist/lytics.js" type="text/javascript"></script>
+<script src="https://unpkg.com/@razorpay/lytics@1.0.1/dist/lytics.js" type="text/javascript"></script>
 ```
 
 ### Initialising

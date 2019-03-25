@@ -1,6 +1,6 @@
 {
   "name": "@razorpay/lytics",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simpler analytics using HTML attributes.",
   "main": "dist/lytics",
   "scripts": {
