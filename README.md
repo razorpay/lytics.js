@@ -22,7 +22,7 @@ npm i lytics --save
 
 Unpkg
 ```html
-<script src="pathtounpkg" type="text/javascript"></script>
+<script src="https://unpkg.com/lytics.js@1.0.0/dist/lytics.js" type="text/javascript"></script>
 ```
 
 ### Initialising
