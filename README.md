@@ -94,7 +94,7 @@ This method takes a DOM Element as an argument and returns an object containing 
 
 # Misc
 
-- Lytics is supposed to be used only on elements whose behaviour isn't being overridden manually by JavaScript.
+- Lytics is supposed to be used only on elements whose behaviour isn't being overridden manually by JavaScript. If you're overriding the behaiour of an element and still wish to track the attributes on that element, use [`lytics.getAttributesOfEl`](#lyticsgetattributesofelel) to get the lytics attributes on that element and call the tracking function manually.
 
 #### Browser Support
 
@@ -109,4 +109,4 @@ This method takes a DOM Element as an argument and returns an object containing 
 
 # License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
