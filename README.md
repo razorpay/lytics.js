@@ -1,7 +1,7 @@
-# lytics.js
+# @razorpay/lytics
 > Simpler analytics using HTML attributes.
 
-<a href="https://travis-ci.com/razorpay/lytics.js" title="Build Status"><img src="https://api.travis-ci.com/razorpay/lytics.js.svg?branch=master" alt="Build Status" /></a> <a href="https://www.npmjs.com/package/lytics.js" title="NPM"><img src="https://img.shields.io/npm/v/lytics.js.svg" alt="NPM" /></a> <a href="https://github.com/razorpay/lytics.js/tree/master/LICENSE" title="License"><img src="https://img.shields.io/github/license/razorpay/lytics.js.svg" alt="License"/></a>
+<a href="https://travis-ci.com/razorpay/lytics.js" title="Build Status"><img src="https://api.travis-ci.com/razorpay/lytics.js.svg?branch=master" alt="Build Status" /></a> <a href="https://www.npmjs.com/package/@razorpay/lytics" title="NPM"><img src="https://img.shields.io/npm/v/@razorpay/lytics.svg" alt="NPM" /></a> <a href="https://github.com/razorpay/lytics.js/tree/master/LICENSE" title="License"><img src="https://img.shields.io/github/license/razorpay/lytics.js.svg" alt="License"/></a>
 
 Lytics enables analytics tracking by adding `data-lytics-*` attributes to HTML elements, without having to write JavaScript for individual elements.
 
@@ -17,12 +17,12 @@ There are lots of "clicks" and "submits" on websites that we need to track. Writ
 
 NPM
 ```bash
-npm i lytics --save
+npm i @razorpay/lytics --save
 ```
 
 Unpkg
 ```html
-<script src="https://unpkg.com/lytics.js@1.0.0/dist/lytics.js" type="text/javascript"></script>
+<script src="https://unpkg.com/@razorpay/lytics@1.0.0/dist/lytics.js" type="text/javascript"></script>
 ```
 
 ### Initialising
@@ -32,7 +32,7 @@ Add `data-lytics-*` attributes to elements, and initialize Lytics by invoking `l
 Import the package if you are using npm.
 
 ```js
-import lytics from 'lytics.js';
+import lytics from '@razorpay/lytics';
 ```
 
 If the script is included using a `<script>` tag, lytics will be available as `window.lytics`.
