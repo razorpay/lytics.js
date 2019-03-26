@@ -1,6 +1,6 @@
 .git/
+.cache/
 test.*
-dist/*
 index.html
 .travis.yml
 .eslintrc.js
