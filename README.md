@@ -26,7 +26,7 @@ Unpkg
 
 ```html
 <script src="https://unpkg.com/@razorpay/lytics@1.0.1/dist/lytics.js"
-integrity="sha384-DW8jEPyRIJh9PjNf0wDmuKSCzsJKdxyA/PiyYq2O5brJIkgdNDrO5LtpFy9uaM3m"
+integrity="sha384-J2iIWdsz7ps49cxomgBfB0HsR5Vz0nIHiuGidH82pjNUhcUd/cyhpaUg6WHLIDea"
 crossorigin="anonymous"></script>
 ```
 
