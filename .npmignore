@@ -1,0 +1,6 @@
+.git/
+.cache/
+test.*
+index.html
+.travis.yml
+.eslintrc.js
