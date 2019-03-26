@@ -49,7 +49,7 @@ export function initListeners(parent, tracker, ignoreSynthetic, timeout) {
   const submit = createAndAttachListener('submit', parent, tracker, ignoreSynthetic, timeout);
 
   return () => {
-    click();
-    submit();
+    click && click();
+    submit && submit();
   }
 }

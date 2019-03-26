@@ -25,8 +25,8 @@ npm i @razorpay/lytics --save
 Unpkg
 
 ```html
-<script src="https://unpkg.com/@razorpay/lytics@1.0.0/dist/lytics.js"
-integrity="sha384-DW8jEPyRIJh9PjNf0wDmuKSCzsJKdxyA/PiyYq2O5brJIkgdNDrO5LtpFy9uaM3m"
+<script src="https://unpkg.com/@razorpay/lytics@1.0.1/dist/lytics.js"
+integrity="sha384-J2iIWdsz7ps49cxomgBfB0HsR5Vz0nIHiuGidH82pjNUhcUd/cyhpaUg6WHLIDea"
 crossorigin="anonymous"></script>
 ```
 
@@ -46,13 +46,14 @@ Initialise lytics:
 
 ```js
 lytics.init({
-    parent: '#myContainer',
-    track: (props, callback) => {
-        trackAnalyticsForWebsite(props).then(() => {
-            callback();
-        });
-    },
-});
+  parent: '#myContainer',
+  tracker: (props, callback) => {
+    trackAnalyticsForWebsite(props)
+      .then(() => {
+        callback();
+      });
+  }
+})
 ```
 
 # Documentation
@@ -76,7 +77,7 @@ Currently, only two types of triggers are supported:
 | Property        | Type                  | Default                    | Description                                                                                                                                 |
 | --------------- | --------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | parent          | String or HTMLElement | `document.documentElement` | Parent element or selector. Delegated events will be listened from this element.                                                            |
-| track           | Function              | (p, cb) => cb();           | Function that gets two parameters: `props`, `callback`. Make sure to invoke callback in the tracking method that you provide.               |
+| tracker           | Function              | (p, cb) => cb();           | Function that gets two parameters: `props`, `callback`. Make sure to invoke callback in the tracking method that you provide.               |
 | ignoreSynthetic | Boolean               | `true`                     | Whether or not to ignore synthetic events. Synthetic events are events triggered programmatically.                                          |
 | timeout         | Number                | 300                        | Timeout for automatic invocation of callback. If the callback isn't executed within `timeout` ms by you, it will automatically be executed. |
 
