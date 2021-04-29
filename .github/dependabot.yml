@@ -1,0 +1,54 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+    timezone: Asia/Calcutta
+  reviewers:
+  - umanghome
+  ignore:
+  - dependency-name: eslint
+    versions:
+    - ">= 6.a, < 7"
+  - dependency-name: eslint
+    versions:
+    - ">= 7.a, < 8"
+  - dependency-name: fastify
+    versions:
+    - "> 2.15.1"
+  - dependency-name: husky
+    versions:
+    - ">= 2.a, < 3"
+  - dependency-name: husky
+    versions:
+    - ">= 3.a, < 4"
+  - dependency-name: husky
+    versions:
+    - ">= 4.a, < 5"
+  - dependency-name: mocha
+    versions:
+    - ">= 7.a, < 8"
+  - dependency-name: mocha
+    versions:
+    - ">= 8.a, < 9"
+  - dependency-name: puppeteer
+    versions:
+    - "> 1.13.0"
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+  - dependency-name: husky
+    versions:
+    - 5.0.8
+    - 5.0.9
+    - 5.1.0
+    - 5.1.1
+    - 5.1.2
+    - 5.1.3
+    - 5.2.0
+  - dependency-name: chai
+    versions:
+    - 4.3.0
+    - 4.3.3
