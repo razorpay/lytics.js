@@ -41,5 +41,10 @@
     "hooks": {
       "pre-push": "npm run test"
     }
+  },
+  "overrides": {
+    "fsevents": "^2.3.3",
+    "@babel/traverse": "^7.28.5",
+    "@babel/preset-env": "^7.28.5"
   }
 }
